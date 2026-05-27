@@ -1,0 +1,153 @@
+html{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+main{
+    width: 70vw;
+}
+
+#megarodzic{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+aside{
+    height: 700px;
+    width: 40vw;
+    margin: 0;
+}
+footer{
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    text-align: start;
+}
+.ikona2{
+    width: 100px;
+    height: 100px;
+}
+
+.gora{
+    height: 100%;
+    display: flex;
+}
+
+.DNL{
+    color: white;
+    font-size: x-large;
+    height: 100%;
+    width: 50%;
+    background-color: #493FA7;
+    text-align: center;
+    font-family: arial;
+}
+
+.info{
+    text-align: center;
+    font-family: arial;
+    height: 129px;
+    width: 50%;
+    background-color: #E5E6EB;
+}
+
+.srodek{
+    flex-direction: column;
+    display: flex;
+    font-family: arial;
+    color: white;
+    height: 700px;
+    width: 100%;
+    background: url(497664172-8d6abdd9-8198-4ef8-8d58-16285fd766b4.svg),#645E9D;
+    text-align: center;
+    font-size: x-large;
+}
+
+.bok{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #493FA7 ;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+.date{
+    display: flex;
+    height: 50px;
+    width: 300px;
+    justify-content: center;
+    align-self: center;
+    font-size: large;
+    font-family: Arial;
+    text-align: center;
+}
+
+.dni{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    background-color: #FAC748;
+    align-self: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    margin-top: 25px;
+    
+}
+
+.kart{
+    align-self: center;
+    background-color: white;
+    height: 50%;
+    width: 90%;
+    font-size: large;
+}
+
+
+
+
+
+.bok2{
+    display: flex;
+    flex-direction: row;
+}
+
+table{
+    background-color: white;
+    color: black;
+    height: 60%;
+    width: 50%;
+    align-self: center;
+}
+
+.bok3{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.zmiana2{
+    display: flex;
+    background-color: #FAC748;
+    flex-direction: row;
+    height: 55px;
+}
+
+
+.kalen{
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+}
+
+

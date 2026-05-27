@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+.Lewy{
+    background-color: seagreen;
+    color: white;
+    height: 260px;
+    width: 75%;
+    font-size: 160%;
+    font-family: Verdana,;
+    line-height: 150px;
+}
+
+
+#Prawy{
+    background-color: seagreen;
+    color: white;
+    height: 260px;
+    width: 25%;
+    font-size: 160%;
+    font-family: Verdana,;
+    line-height: 150px;
+    text-align: right;
+}
+
+
+#glowny{
+    background-color: mintcream;
+    padding:    80px ;
+    font-family: Verdana,;
+}
+
+#stopka1{
+    background-color: seagreen;
+    color: white;
+    height: 70px;
+    width: 50%;
+    text-align: center;
+}
+
+
+#stopka2{
+    display: flex;
+    background-color: seagreen;
+    color: white;
+    height: 70px;
+    width: 50%;
+    text-align: center;
+}
+
+
+.obraz{
+    align-self: flex-end;
+    transform: scaleX(-1);
+}
+
+
+
+#in{
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    width: 200px;
+}
+
+
+.stopki{
+    display: flex;
+    flex-direction: row;
+}
+
+
+a{
+    text-decoration: none;
+    align-self: center;
+    height: 100px;
+    width: 50px;
+    background-color: mintcream;
+    color: seagreen;
+    padding: 15px;
+    line-height: 70px;
+}
+
+
