@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    $conn = mysqli_connect("localhost", "root", "", "php_przyklad");
+
+    if($conn->connect_error) {
+        echo "nie udało sie :(";
+    } else {
+        echo "Połączono z bazą danych";
+    }
+    
+    
+    
+
+
+    echo "<br>";
+
+
+
+    $sql = "SELECT * FROM uzytkownicy";
+
+    $result = mysqli_query($conn, $sql);
+
+    
+    while($row = mysqli_fetch_assoc($result)) {
+        $id = $row['id'];
+        $nazwa = $row['nazwa'];
+        $email = $row['email'];
+        $haslo = $row['haslo'];
+        
+        echo  "
+    <table>
+    <tr>
+    <th>$id</th>
+    <th>$nazwa</th>
+    <th>$email</th>
+    <th>$haslo</th>
+    </tr>
+    </table>
+    ";
+    }
+
+    echo "<br>";
+
+    ?>
+
+    <form action='index.php' method='POST'>
+        <label for='imie'>
+            <p>Podaj swoje imie:</p>
+            <input type='text' name='imie' id='imie'/>
+        </label>
+        <label for='email'>
+            <p>Podaj swoj email</p>
+            <input type='email' name='email' id='email'/>
+        </label>
+        <label for='haslo'>
+            <p>Podaj swoje halso</p>
+            <input type='password' name='haslo' id='haslo'/>
+        </label>
+        <label for='id'>
+            <p>Podaj swoje id</p>
+            <input type='number' step="1" name='id' id='id'/>
+        </label>
+
+        <button name="button">Dodaj</button>
+    </form>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['button'])) {  
+        $id = $_POST['id'];
+        $imie = $_POST['imie'];
+        $haslo = $_POST['haslo'];
+        $email = $_POST['email'];
+        
+        $sql = "UPDATE uzytkownicy SET nazwa = '$imie', email = '$email', haslo = '$haslo' where id = '$id' ";
+        mysqli_query($conn, $sql);
+        
+        echo "update";
+    }
+
+    if 
+    
+    ?>
