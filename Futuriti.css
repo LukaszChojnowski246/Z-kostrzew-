@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter";
+    margin: 0;
+}
+
+#futurit {
+    background-color: #D9D9D9;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#zdj2 {
+    margin-left: 50px;
+    height: 115px;
+    width: 312px;
+}
+
+#kursy {
+    display: flex;
+    justify-self: flex-end;
+    font-size: 120%;
+    width: 320px;
+    margin-right: 60px;
+    text-align: center;
+}
+
+#linki {
+    background-color: #4B4B4B;
+    width: 75%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    background-color: #D9D9D9;
+    padding-top: 12px;
+}
+
+a:hover {
+    background-color: #EAC100;
+    transition: 0.2s;
+}
+
+#gl {
+    background-color: #EAC100;
+    margin-left: 40px;
+    width: 150px;
+    height: 35px;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    font-size: 90%;
+}
+
+#rat {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 20px;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    font-size: 90%;
+}
+
+#part {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #000000;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    font-size: 90%;
+}
+
+#tło {
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 80%;
+    background-image: url(498784722-05907420-fb08-4f53-9bf5-b3602198a61e.png);
+}
+
+#nami {
+    margin: 0;
+    background: url(cos.png);
+    width: 93.5%;
+
+}
+
+#plan {
+    font-size: 200%;
+    text-align: center;
+    width: 300px;
+}
+
+#fajny {
+    width: 650px;
+    height: 550px;
+}
+
+table {
+    width: 100%;
+    height: 63%;
+}
+
+.szary {
+    background-color: #D9D9D9;
+    width: 45%;
+    text-align: center;
+}
+
+.zolty {
+    background-color: #EAC100;
+    width: 45%;
+    text-align: center;
+}
+
+#foot {
+    background-color: #D9D9D9;
+    height: 79px;
+    margin-top: 30px;
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.zdj {
+    width: 20px;
+    height: 20px;
+}
+
+#faj {
+    display: flex;
+    flex-direction: column;
+}
+
+#mapa {
+    height: 79px;
+    margin-left: 123px;
+}
+
+button {
+    width: 230px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #EAC100;
+    margin-left: 150px;
+    font-size: 110%;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#formularz {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 170%;
+    font-weight: 700;
+}
+
+form {
+    background-color: #D9D9D9;
+    width: 45%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-self: end;
+    margin-left: 30px;
+}
+
+#send {
+    width: 50px;
+    height: 50px;
+}
+
+#fajnyrodzic {
+    display: flex;
+    flex-direction: row;
+}
+
+#imie {
+    margin-top: 20px;
+    width: 670px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+#numer {
+    margin-top: 20px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 110%;
+    border: none;
+}
+
+#wiadomosc {
+    margin-top: 20px;
+    width: 670px;
+    height: 200px;
+    border-radius: 10px;
+    border: none;
+}
+
+.la {
+    font-size: 120%;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+#programowanie {
+    background-color: #D9D9D9;
+    height: 50px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 200%;
+}
+
+#git {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+hr {
+    width: 400px;
+    border: 2px solid #000000;
+    margin: 0;
+}
+
+#prog {
+    margin: 0;
+}
+
+#github {
+    width: 50px;
+    height: 50px;
+}
+
+#szary {
+    background-color: #4B4B4B;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    font-size: 60%;
+}
+
+article {
+    background-color: #D9D9D9;
+    width: 90%;
+    height: 650px;
+    font-size: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+#Kolory {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 1000px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 5px 3px black;
+}
+
+#niebieski {
+    background-color: #61DBFB;
+    width: 350px;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 5px 3px black;
+    transition: 0.070s;
+    display: flex;
+    justify-content: space-evenly;
+    text-shadow: -2px 0 skyblue, 0 -2px skyblue, 0 -2px skyblue, 0 -2px skyblue;
+}
+
+#niebieski:hover {
+    width: 450px;
+    transition: 0.070s;
+}
+
+#zielony {
+    background-color: #42B883;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.070s;
+    display: flex;
+    text-shadow: -2px 0 green, 0 -2px green, 0 -2px green, 0 -2px green;
+    box-shadow: 0px 5px 3px black;
+    justify-content: space-evenly;
+}
+
+#zielony:hover {
+    width: 450px;
+    transition: 0.070s;
+}
+
+
+#fioletowy {
+    background-color: #787CB5;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.070s;
+    display: flex;
+    text-shadow: -2px 0 rgb(121, 99, 172), 0 -2px rgb(121, 99, 172), 0 -2px rgb(121, 99, 172), 0 -2px rgb(121, 99, 172);
+    box-shadow: 0px 5px 3px black;
+    justify-content: space-evenly;
+}
+
+#fioletowy:hover {
+    width: 450px;
+    transition: 0.070s;
+}
+
+#czerwony {
+    background-color: #BC0B15;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.070s;
+    display: flex;
+    text-shadow: -2px 0 rgb(160, 2, 2), 0 -2px rgb(160, 2, 2), 0 -2px rgb(160, 2, 2), 0 -2px rgb(160, 2, 2);
+    box-shadow: 0px 5px 3px black;
+    justify-content: space-evenly;
+}
+
+#czerwony:hover {
+    width: 450px;
+    transition: 0.070s;
+}
+
+
+#big2{
+    background-color: #D9D9D9;
+    width: 1050px;
+    height: 500px;
+    margin-left: 200px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+#kalkulator{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#rata{
+    background-color: #4B4B4B;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+    font-size: 130%;
+}
+.check{
+    border-radius: 30px;
+    width: 20px;
+    height: 20px;
+}
+#miasta{
+    background-color: #4B4B4B;
+    width: 250px;
+    height: 50px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+#miasto{
+    margin-top: 70px;
+    width: 300px;
+    height: 400px;
+}
+#rata{
+    width: 200px;
+    height: 400px;
+    margin-top: 70px;
+}
+#raty{
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    font-size: 130%;
+}
+.kurs2{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    font-size: 130%;
+}
+#kurs{
+    width: 400px;
+    margin-top: 20px;
+    height: 230px;
+    background-color: #4B4B4B;
+    color: #FFFFFF;
+    flex-wrap: wrap;
+    display: flex;
+}
+.kursy{
+    font-size: 120%;
+    width: 175px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    font-size: 140%;
+    font-weight: 700;
+}
+#kursy2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+}
+#kwoty{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 150px;
+    margin-left: 50px ;
+}
+.kwota{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 130%;
+}
+#liczba{
+    margin-left: 100px;
+}
