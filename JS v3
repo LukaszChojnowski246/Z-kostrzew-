@@ -1,0 +1,228 @@
+1.
+const header = document.querySelector("#main-header")
+
+2.
+const li = document.querySelectorAll("nav > li")
+
+3.
+const delete_trigger = document.querySelector(".delete-trigger")
+const firstChild = delete_trigger.firstElementChild;
+
+4.
+const content_area = document.querySelectorAll("#content-area > section")
+
+5.
+const data_secret = document.querySelector("[data-secret]")
+
+6.
+const data_link = document.querySelector("a[data-link='home']")
+const link = data_link.href
+
+7.
+const trigger_btn = document.querySelector("#trigger-btn")
+trigger_btn.closest(".level-1")
+
+8.
+const tr = document.querySelectorAll("tbody > tr")
+
+9.
+const figcaption = document.querySelector("figcaption")
+const main_image = figcaption.previousSibling("#main-image")
+
+10.
+const checkbox = document.querySelectorAll("legend > checkbox")
+
+11.
+const username = document.querySelector("#username")
+const rodzic = username.parentElement("#username")
+
+12.
+const notification_wrapper = document.querySelector (".notification-wrapper")
+const dziecko = notification_wrapper.childNodes(".notification_wrapper")
+
+13.
+const h1 = document.querySelector("h1").textContent
+
+14.
+const notification_list = document.querySelector("#notification-list")
+const ostatni = notification_list.lastElementChild("#notification-list")
+
+15.
+const nest = document.querySelectorAll(".nest.level-2")
+
+16.
+const li = document.createElement("li")
+const nav = document.querySelector(".nav-list")
+nav.prependChild(li)
+
+17.
+const button = document.createElement("button")
+button.textContent = "Logowanie"
+const nav = document.querySelector("nav")
+nav.appendChild(button)
+
+18.
+function myCreateFunction() {
+  var table = document.querySelector("#user-table");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = "103";
+  cell2.innerHTML = "Piotr";
+}
+
+19.
+const newP = document.createElement("p")
+newP.textContent = 'Uwaga'
+const forms_demo = document.querySelector("#forms-demo")
+forms_demo.prepend(newP)
+
+20.
+const ul = document.createElement("ul")
+const ul2 = document.createElement("ul")
+const ul3 = document.createElement("ul")
+ul.textContent = "asdasddadsads"
+ul2.textContent = "adasdasdadsddddddddd"
+ul3.textContent = "asdadasdadsddddd"
+const skill_list = document.querySelector("#skill-list")
+skill_list.appendChild(ul)
+skill_list.appendChild(ul2)
+skill_list.appendChild(ul3)
+
+21.
+const p = document.querySelector(".notification-item, .alert");
+console.log(p)
+const p2 = p.cloneNode(true);
+const notification_wrapper = document.querySelector(".notification-wrapper")
+notification_wrapper.appendChild(p2)
+
+
+22.
+const span = document.createElement("span")
+span.textContent = ("wymagane")
+const label = document.querySelector(".form-group > label")
+label.appendChild(span)
+
+23.
+
+
+const hr = document.createElement("hr")
+const olo = document.querySelector("#content-area")
+for(const child of olo.children){
+  child.append(hr)
+}
+
+24.
+const inner = document.querySelector("footer > address")
+inner.innerHTML = "https://pl.wikipedia.org/wiki/Lando_(papie%C5%BC)"
+}
+
+
+25.
+const lab = document.querySelector("h1")
+lab.prepend("👍")
+
+26.
+const pop = document.createElement("option")
+pop.textContent = "Administrator"
+const pop2 = document.querySelector("#role-select")
+pop2.appendChild(pop)
+
+27.
+const pop = document.createElement("style")
+const pop3 = document.querySelector("body")
+pop3.style.backgroundColor = "lightgrey"
+const pop2 = document.querySelector("head")
+pop2.appendChild(pop)
+
+28.
+const pop = document.createElement("button")
+pop.textContent = "anuluj"
+const pop2 = document.querySelector("#complex-form")
+pop2.appendChild(pop)
+
+29.
+const pop = document.createElement("div")
+pop.textContent = "👍"
+pop.classList.add("alert-box")
+const pop2 = document.querySelector("#data-demo")
+pop2.prepend(pop)
+
+
+30.const pop = document.createElement("mark")
+const pop2 = document.querySelector(".level-3, .nest")
+pop2.appendChild(pop)
+
+
+31.const pop = document.querySelector("header > h1")
+pop.style.color = "darkblue"
+
+
+32.const pop = document.querySelector(".admin-only")
+pop.style.displey = "block"
+
+33.const pop = document.querySelector("#main-image")
+pop.setAttribute("src", "papaj.www.pl")
+
+34.const pop = document.querySelectorAll(".notification-item")
+pop.classList.add("highlight")
+
+35.const pop = document.querySelector("#username")
+pop.setAttribute("placeholder", "Podaj imie... ")
+
+36.const pop = document.querySelector("[data-priority]")
+console.log(pop.dataset.priority)
+
+37.const pop = document.querySelector("time")
+pop.setAttribute("datetime", "29-04-2026")
+
+38.const pop = document.querySelector("#username")
+pop.setAttribute("type", "disable")
+
+39.const pop = document.querySelector("figcaption")
+pop.textContent = "Nowy opis obrazka"
+
+
+40.const pop = document.querySelector("table")
+pop.style.border = "2px solid black";
+
+41.const pop = document.querySelector(".level-3")
+pop.classList.remove("nest")
+
+42.const pop = document.querySelector(".success")
+pop.style.backgroundColor = "green"
+
+43.const pop = document.querySelectorAll("nav > ul > li > a")
+pop.forEach((lin) => {
+  lin.setAttribute("target", "_blank")
+})
+
+44.const pop = document.querySelector("#username")
+pop.setAttribute("value", "Moderator")
+
+45.const pop = document.querySelector(".active")
+const pop2 = document.querySelector("#trigger-btn")
+if (pop2.contains(pop)) {
+  console.log("jest")
+}
+
+46.const pop = document.querySelector("#notification-list")
+const pop2 = document.querySelector(".notification-item")
+pop.removeChild(pop2)
+
+47.const pop = document.querySelector("#semantic-demo")
+const pop2 = pop.childNodes
+pop.remove(pop2)
+
+48.const pop = document.querySelector("tr[data-user-id='102']")
+pop.remove()
+
+49.const pop = document.querySelectorAll(".description")
+pop.forEach((des) => {
+  des.remove
+})
+
+50.const pop = document.querySelector("footer")
+pop.remove
+
+

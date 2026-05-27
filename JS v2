@@ -1,0 +1,262 @@
+1.const cos = document.querySelector(".title")
+cos.textContent = "DOM Training Arena"
+
+
+2.const cos = document.querySelector(".nav-item")
+cos.textContent = "Start"
+
+
+3.const cos = document.querySelectorAll(".menu-list")
+for(let lol of cos)[
+console.log(lol.textContent)
+]
+
+
+4.const xd = document.querySelector(".card.highlight")
+xd.setAttribute("class", "active")
+
+
+5.const xd = document.querySelector(".card .card-header")
+xd.textContent = ("Zmieniona karta")
+
+
+6.const xd2 = document.querySelector("details > .info-text")
+xd2.textContent = "pies"
+
+
+7.
+const xd2 = document.querySelectorAll(".input-text")
+xd2.value = "jan"
+
+
+8.const xd2 = document.querySelector(".select")
+xd2.value = "de"
+
+
+9.const xd2 = document.querySelector(".checkbox")
+xd2.checked = true
+
+10.const xd2 = document.querySelector(".deep-text")
+xd2.setAttribute("class", "highlight")
+
+
+11.
+const xd2 = document.createElement("li")
+xd2.textContent = "Nowy Element"
+const dynamic = document.querySelector("#dynamic-list")
+dynamic.appendChild(xd2)
+
+
+12.const xd3 = document.createElement("kot1")
+const xd4 = document.createElement("kot2")
+const xd5 = document.createElement("kot3")
+
+const lista = document.querySelector(".menu-list")
+lista.appendChild(xd3)
+lista.appendChild(xd4)
+lista.appendChild(xd5)
+
+
+
+13.const xd3 = document.createElement("div")
+xd3.setAttribute("class", "card")
+const xd4 = document.querySelector(".cards-section")
+xd4.appendChild(xd3)
+
+
+14.const xd3 = document.createElement("div")
+xd3.classList.add("box")
+xd3.textContent = "lol"
+
+const xd4 = document.querySelector(".boxes-container")
+xd4.appendChild(xd3)
+
+
+  15.const xd3 = document.createElement("p")
+
+const xd4 = document.querySelector(".dynamic-area")
+xd4.appendChild(xd3)
+xd3.textContent = "fajne cos"
+
+
+16.const xd3 = document.createElement("div")
+xd3.classList.add("box")
+xd3.textContent = "cos"
+const xd4 = document.querySelector("#insertion-container")
+
+xd4.appendChild(xd3)
+
+xd4.prepend(xd3)
+
+17.const xd3 = document.createElement("li")
+xd3.textContent = "teskt"
+
+
+const xd4 = document.querySelector("#dynamic-list")
+
+xd4.appendChild(xd3)
+xd4.prepend(xd3)
+
+
+
+18.const xd3 = document.querySelectorAll(".card-header")
+
+xd3.forEach(xd3 => {
+  const span = document.createElement("span")
+  xd3.textContent = "karty"
+  xd3.appendChild(span)
+})
+
+
+19.
+const xd3 = document.createElement("p")
+xd3.textContent = "cos"
+
+
+const xd4 = document.querySelector("details")
+
+
+xd4.appendChild(xd3)
+
+20.const xd3 = document.createElement("button")
+xd3.textContent = "przycisk!"
+
+const xd4 = document.querySelector(".playground")
+
+xd4.appendChild(xd3)
+
+20.
+const przycisk = document.createElement("button")
+przycisk.textContent = "przycisk"
+const button = document.querySelector(".playground")
+button.append(przycisk)
+
+21.
+const remove = document.querySelectorAll(".removable")
+for (let element of remove ){
+  element.remove()
+}
+
+22.
+const dynamo = document.querySelector("#dynamic-list > li:nth-last-child(1)")
+const lisc = document.querySelector("#dynamic-list")
+lisc.removeChild(dynamo)
+
+23.
+const card = document.querySelector(".card[data-id='1']")
+card.remove()
+
+24.
+const boxy = document.querySelectorAll(".box")
+const wp = document.querySelector("#insertion-container")
+boxy.forEach((elements)=>
+wp.remove(boxy))
+
+25.
+const detale = document.querySelector("details")
+detale.remove()
+
+26.
+const pw = document.querySelectorAll("input")
+pw.forEach(inputs => {
+  console.log(inputs.name)
+})
+
+27.
+const mail = document.querySelector("input[name='email']")
+mail.name = "user-email"
+
+28.
+const light = document.querySelector(".card-highlight")
+light.setAttribute('data-test', 123)
+
+29.
+const menu = document.querySelectorAll(".menu-list li")
+menu.forEach((elementy)=>
+elementy.textContent = "Zmieniono")
+
+30.
+const kkarta = document.querySelector(".card")
+kkarta.classList.add('processed');
+const data2 = document.querySelector(".card")
+data2(data.status) = "done"
+
+31.
+const element = document.querySelector("#add_item_bttn")
+element.addEventListener("click", () => {
+  const item_input = document.querySelector("#item-input").value
+
+  const li = document.querySelector("li")
+  li.textContent = item_input
+  document.querySelector("#dynamic-list").appendChild(li)
+  document.querySelector("#item-input").value
+ = ' '
+})
+
+32.
+const item_input = document.querySelector("#item-input")
+item_input.addEventListener("input", (event) => {
+  console.log(event.target.value)
+})
+
+33.
+const insert_before_btn = document.querySelector("#insert-before-btn")
+insert_before_btn.addEventListener("click", () => {
+  const box = document.querySelector("div")
+  box.classList.add("box")
+  const insertion_conteiner =  document.querySelector("#insertion-container")
+  insertion_conteiner.prepend(box)
+})
+
+34.
+const add_box_btn = document.querySelector("#add-box-btn")
+add_box_btn.addEventListener("click", () => {
+  const box = document.querySelector(".boxes-container")
+  box.classList.add("box")
+  const insertion_conteiner =  document.querySelector(".boxes-container")
+  insertion_conteiner.prepend(box)
+})
+
+35.
+const removable = document.querySelectorAll(".removable")
+
+for(let element of removable){
+  element.addEventListener("click", (event)=> {
+    event.target.remove();
+  })
+}
+
+36.
+const test_form = document.querySelector("#test-form")
+test_form.addEventListener("sumbit", (event) => {
+    event.preventDefault()
+})
+
+37.
+const select = document.querySelector(".select")
+select.addEventListener("change", (event) => {
+  console.log(event.target.value)
+})
+
+38.
+
+39.
+const cards = document.querySelectorAll(".card")
+for(let card of cards){
+  card.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "green"
+  })
+
+  card.addEventListener("mouseout", (event)=>{
+    event.target.style.backgroundColor = "red"
+  })
+}
+
+40.
+const input = document.querySelector("input[name = 'name]")
+
+input.addEventListener("keydown", (event) =>{
+  if(event.key === "Enter") {
+    console.log(event.target.value)
+  }
+})
