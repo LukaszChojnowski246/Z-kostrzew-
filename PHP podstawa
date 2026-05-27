@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div> <h1>lubie placki</h1></div>
+
+    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quia quae aut officia in quaerat id omnis, consequatur rem laboriosam architecto reiciendis minus, nisi asperiores fugiat, numquam provident similique optio?</h2>
+
+
+
+    <?php
+    $imie = " Łukasz ";
+    $wiek =  24;
+    $country = "Poland";
+
+    echo "Nazywam się $imie mam $wiek lat i mieszkam w $country ";
+    echo ("<br>");
+    $a = 10;
+    $b = 1;
+    $suma = $a + $b;
+
+    echo " wynik to $suma";
+    echo ("<br>");
+
+
+    $aa = 5;
+    $bb = 8;
+    $wynik = $aa * $bb ;
+
+    echo " wynik tego oto  prostokąta to $wynik ";
+    echo ("<br>");
+    $isMember = false;
+    var_dump($isMember);
+    echo ("<br>");
+
+    $c = 15;
+    $h = 23;
+
+    $sum = $c + $h;
+    $dif =  $c - $h;
+    $product = $c * $h;
+    $quotient = $c / $h;
+    $mod = $c % $h;
+
+    echo "liczby 15 i 23 dodanie ich to $suma odejmowanie ich to $dif mnożenie to $product dzielenie to $quotient a reszta z dzielenia to $mod";
+    echo ("<br>");
+
+    #instrukcje warunkowe
+
+    $age = 32;
+    if ($age >= 18) {
+        echo "mozesz głosowac";
+    } elseif ($age <= 18) {
+        echo "nie mozesz głosowac";
+    }
+    echo ("<br>");
+
+    $kolorek = 1;
+
+    switch($kolorek) {
+        case 1:
+            echo "Czerwony";
+            break;
+        case 2:
+            echo "zielony";
+            break;
+        default:
+            echo "Inny dzień";
+
+    }
+    echo ("<br>");
+
+    
+    $grade = 100;
+
+    if ($grade >= 50) {
+        echo "zdany";
+    } elseif ($grade <=50) {
+        echo "niezdany";
+    }
+
+    echo ("<br>");
+
+    $username = true;
+
+    if ($username = false) {
+       echo $username = "guest";
+    } elseif ($username = true) {
+       echo $username = "kozak";
+    }
+
+    echo ("<br>");
+
+
+    
+
+    ?>
+</body>
+</html>
