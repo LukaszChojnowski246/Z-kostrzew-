@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <section class="big">
     <?php
     $conn = mysqli_connect("localhost", "root", "", "php_przyklad");
 
@@ -27,7 +29,6 @@
 
     $result = mysqli_query($conn, $sql);
 
-    
     while($row = mysqli_fetch_assoc($result)) {
         $id = $row['id'];
         $nazwa = $row['nazwa'];
@@ -49,6 +50,43 @@
     echo "<br>";
 
     ?>
+    
+
+        <form action='index.php' method='POST'>
+            <label for='imie'>
+                <p>Podaj swoje imie:</p>
+                <input type='text' name='imie' id='imie'/>
+            </label>
+            <label for='email'>
+                <p>Podaj swoj email</p>
+                <input type='email' name='email' id='email'/>
+            </label>
+            <label for='haslo'>
+                <p>Podaj swoje halso</p>
+                <input type='password' name='haslo' id='haslo'/>
+            </label>
+            <label for='id'>
+                <p>Podaj swoje id</p>
+                <input type='number' step="1" name='id' id='id'/>
+            </label>
+            
+            <button name="button">Update</button>
+        </form>
+        <section class = "tabele">
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['button'])) {  
+            $id = $_POST['id'];
+            $imie = $_POST['imie'];
+            $haslo = $_POST['haslo'];
+            $email = $_POST['email'];
+            
+            $sql = "UPDATE uzytkownicy SET nazwa = '$imie', email = '$email', haslo = '$haslo' where id = '$id' ";
+            mysqli_query($conn, $sql);
+            
+            echo "update";
+        }
+    
+        ?>
 
     <form action='index.php' method='POST'>
         <label for='imie'>
@@ -63,27 +101,116 @@
             <p>Podaj swoje halso</p>
             <input type='password' name='haslo' id='haslo'/>
         </label>
-        <label for='id'>
-            <p>Podaj swoje id</p>
-            <input type='number' step="1" name='id' id='id'/>
-        </label>
 
-        <button name="button">Dodaj</button>
+        <button name="button2">Dodaj</button>
     </form>
 
+
+
+
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['button'])) {  
-        $id = $_POST['id'];
+    if (isset($_POST['button2'])){
         $imie = $_POST['imie'];
         $haslo = $_POST['haslo'];
         $email = $_POST['email'];
         
-        $sql = "UPDATE uzytkownicy SET nazwa = '$imie', email = '$email', haslo = '$haslo' where id = '$id' ";
+        $sql = "INSERT INTO uzytkownicy (nazwa, haslo, email) values ('$imie', '$haslo', '$email') ";
         mysqli_query($conn, $sql);
-        
-        echo "update";
+        echo "Dodano";
     }
-
-    if 
-    
     ?>
+
+<section>
+
+<form action='index.php' method='POST'>
+    <label for='id'>
+        <p>Podaj swoje id</p>
+        <input type='number' step="1" name='id' id='id'/>
+    </label>
+    
+<button name="button3">usuń</button>
+</form>
+
+
+<?php
+
+
+    
+    
+    if  ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['button3'])){
+        $id = $_POST['id'];
+        
+        $sql = "DELETE FROM uzytkownicy WHERE id = '$id' ";
+        mysqli_query($conn, $sql);
+        echo "usunieto";
+    }
+?>
+<section class="tab">
+
+    <?php
+$sql = "SELECT * FROM produkty";
+
+$result = mysqli_query($conn, $sql);
+
+
+while($row = mysqli_fetch_assoc($result)) {
+    $id = $row['id'];
+    $nazwa = $row['nazwa'];
+    $cena = $row['cena'];
+    
+    echo"
+    <table>
+    <tr>
+    <th>$id</th>
+    <th>$nazwa</th>
+    <th>$cena</th>
+    </tr>
+    </table>
+    ";
+}
+
+?>
+</section>
+
+<form action='index.php' method='POST'>
+    <label for='nazwa'>
+        <p>Podaj nazwe :</p>
+        <input type='text' name='nazwa' id='nazwa'/>
+    </label>
+    <label for='opis'>
+        <p>Podaj opis</p>
+        <input type='text' name='opis' id='opis'/>
+    </label>
+    <label for='cena'>
+        <p>Podaj cene</p>
+        <input type='number' name='cena' id='cena'/>
+    </label>
+    
+    <button name="button10">DODAJ</button>
+</form>
+</section>
+
+<section class="tab">
+
+    <?php
+    if (isset($_POST['button10'])){
+        $nazwa = $_POST['nazwa'];
+        $opis = $_POST['opis'];
+        $cena = $_POST['cena'];
+        
+        $sql = "INSERT INTO produkty (nazwa, opis ,cena ) values ('$nazwa', '$opis', '$cena') ";
+        mysqli_query($conn, $sql);
+        echo "Dodano";
+    }
+    ?>
+
+</section>
+
+
+</section>
+
+
+
+
+
+
