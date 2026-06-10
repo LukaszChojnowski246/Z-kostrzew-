@@ -52,7 +52,41 @@
     ?>
     
 
-        <form action='index.php' method='POST'>
+        
+        <H1>dodaj uzytkownika</H1>
+    <form action='index.php' method='POST'>
+        <label for='imie'>
+            <p>Podaj swoje imie:</p>
+            <input type='text' name='imie' id='imie'/>
+        </label>
+        <label for='email'>
+            <p>Podaj swoj email</p>
+            <input type='email' name='email' id='email'/>
+        </label>
+        <label for='haslo'>
+            <p>Podaj swoje halso</p>
+            <input type='password' name='haslo' id='haslo'/>
+        </label>
+
+        <button name="button2">Dodaj</button>
+    </form>
+
+
+
+
+    <?php
+    if (isset($_POST['button2'])){
+        $imie = $_POST['imie'];
+        $haslo = $_POST['haslo'];
+        $email = $_POST['email'];
+        
+        $sql = "INSERT INTO uzytkownicy (nazwa, haslo, email) values ('$imie', '$haslo', '$email') ";
+        mysqli_query($conn, $sql);
+        echo "Dodano użytkownika";
+    }
+    ?>
+    <h1>Zmień dane</h1>
+<form action='index.php' method='POST'>
             <label for='imie'>
                 <p>Podaj swoje imie:</p>
                 <input type='text' name='imie' id='imie'/>
@@ -83,45 +117,11 @@
             $sql = "UPDATE uzytkownicy SET nazwa = '$imie', email = '$email', haslo = '$haslo' where id = '$id' ";
             mysqli_query($conn, $sql);
             
-            echo "update";
+            echo "Zmieniono dane";
         }
-    
         ?>
-
-    <form action='index.php' method='POST'>
-        <label for='imie'>
-            <p>Podaj swoje imie:</p>
-            <input type='text' name='imie' id='imie'/>
-        </label>
-        <label for='email'>
-            <p>Podaj swoj email</p>
-            <input type='email' name='email' id='email'/>
-        </label>
-        <label for='haslo'>
-            <p>Podaj swoje halso</p>
-            <input type='password' name='haslo' id='haslo'/>
-        </label>
-
-        <button name="button2">Dodaj</button>
-    </form>
-
-
-
-
-    <?php
-    if (isset($_POST['button2'])){
-        $imie = $_POST['imie'];
-        $haslo = $_POST['haslo'];
-        $email = $_POST['email'];
-        
-        $sql = "INSERT INTO uzytkownicy (nazwa, haslo, email) values ('$imie', '$haslo', '$email') ";
-        mysqli_query($conn, $sql);
-        echo "Dodano";
-    }
-    ?>
-
 <section>
-
+ <h1> usuń uzytkownika</h1>
 <form action='index.php' method='POST'>
     <label for='id'>
         <p>Podaj swoje id</p>
@@ -130,6 +130,7 @@
     
 <button name="button3">usuń</button>
 </form>
+
 
 
 <?php
@@ -142,9 +143,12 @@
         
         $sql = "DELETE FROM uzytkownicy WHERE id = '$id' ";
         mysqli_query($conn, $sql);
-        echo "usunieto";
+        echo "usunieto użytkownika ";
     }
 ?>
+
+    <h1>tabela produktow</h1>
+
 <section class="tab">
 
     <?php
@@ -170,8 +174,8 @@ while($row = mysqli_fetch_assoc($result)) {
 }
 
 ?>
+<h1>Dodaj produkt</h1>
 </section>
-
 <form action='index.php' method='POST'>
     <label for='nazwa'>
         <p>Podaj nazwe :</p>
@@ -198,19 +202,43 @@ while($row = mysqli_fetch_assoc($result)) {
         $opis = $_POST['opis'];
         $cena = $_POST['cena'];
         
+        
         $sql = "INSERT INTO produkty (nazwa, opis ,cena ) values ('$nazwa', '$opis', '$cena') ";
         mysqli_query($conn, $sql);
-        echo "Dodano";
+        echo "Dodano produkt";
     }
     ?>
 
 </section>
+    
+<h1>Zmien dane produktu</h1>
+</section>
+<form action='index.php' method='POST'>
+    <label for='cena'>
+        <p>Podaj cene</p>
+        <input type='number' name='cena' id='cena'/>
+    </label>
+    <label for='id'>
+        <p>Podaj id</p>
+        <input type='number' name='id' id='id'/>
+    </label>
+    
+    <button name="button11">update</button>
 
+</form>
 
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['button11'])) {  
+            $cena = $_POST['cena'];
+            $id = $_POST['id'];
+            
+            $sql = "UPDATE produkty SET cena = '$cena'  where id = '$id' ";
+            mysqli_query($conn, $sql);
+            
+            echo "Zmieniono cene";
+        }
+?>
 </section>
 
 
-
-
-
-
+</section>
