@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    //  zad 1
+    for ($i = 1; $i <= 100; $i++) {
+        if ($i % 3 == 0)
+        echo $i . " ";
+    }
+    echo "<br>";
+    // zad 2
+    $liczby = [1,2,3,4];
+    $suma = array_sum($liczby);
+    echo "$suma";
+    echo "<br>";
+    // zad 3
+    ?>
+    <form action="index.php" method="POST">
+        <label for="liczba">
+            <p>podaj liczbe</p>
+            <input type="number" name='liczba' id="liczba">
+        </label>
+        <button type="submit">klik</button>
+    </form>
+
+    <?php
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $liczba = $_POST['liczba'];
+
+   if ($liczba % 2==0) {
+    echo "liczba parzysta";
+} else {
+    echo "nie parzysta";
+}
+
+}
+    ?>
+
+    <?php
+    echo "<br>";
+    // zad 7
+    for ($i = 1; $i <= 100; $i++) {
+        if ($i % 3 == 0) {
+            echo"fizz  ";
+        } else if ($i % 5 == 0) {
+            echo"buzz  ";
+        } else if ($i % 3 == 0 and $i % 5 == 0) {
+            echo "FIZZBUZZ  ";
+        } else {
+            echo $i . " ";
+        }
+    }
+    echo "<br>";
+    // zad 8
+    $tekst = "kochampieski";
+    echo  strlen($tekst);
+    echo "<br>";
+    // zad 10
+    $text2 = "kochampieski";
+    echo strrev($text2);
+    echo "<br>";
+
+    // zad 11
+    function wieksza($a, $b) {
+        return max($a, $b);
+    }
+    ?>
+</body>
+</html>
